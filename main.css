@@ -40,3 +40,18 @@ section.vid div.story div {
     align-items: center;
     justify-content: center;
 }
+
+/* Glass Effect */
+.glass{
+    background: transparent;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  
+    box-sizing: border-box;
+    width: 875px;
+    height: 545px;
+    padding: 65px 65px;
+  }
