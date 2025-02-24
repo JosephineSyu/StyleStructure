@@ -8,10 +8,10 @@ img.onload = function () {
     const canvas = document.getElementById('imageCanvas');
     const ctx = canvas.getContext('2d');
 
-    canvas.width = img.naturalWidth;
-    canvas.height = img.naturalHeight;
+    canvas.width = img.width;
+    canvas.height = img.height;
 
-    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+    ctx.drawImage(img, 0, 0, img.width, img.height);
 
     const width = canvas.width; 
     const height = canvas.height; 
