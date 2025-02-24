@@ -9,19 +9,10 @@ img.onload = function () {
     const canvas = document.getElementById('imageCanvas');
     const ctx = canvas.getContext('2d');
 
-    const maxWidth = window.innerWidth * 0.9; 
-    const maxHeight = window.innerHeight * 0.9; 
+    canvas.width = img.naturalWidth;
+    canvas.height = img.naturalHeight;
 
-    let scaleFactor = Math.min(maxWidth / img.naturalWidth, maxHeight / img.naturalHeight);
-
-    if (scaleFactor > 1) scaleFactor = 1; 
-
-    canvas.width = img.naturalWidth * scaleFactor;
-    canvas.height = img.naturalHeight * scaleFactor;
-
-    console.log("New Canvas Size:", canvas.width, "x", canvas.height);
-
-    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+    ctx.drawImage(img, 0, 0, canvasWidth, canvasHeight);
 
     const width = canvas.width; 
     const height = canvas.height; 
