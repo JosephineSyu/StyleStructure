@@ -11,6 +11,7 @@ h3 {
     font-family: "Nunito", sans-serif;
     color: white;
     text-align: left;
+    margin-left:20em;
   }
 section.vid {
     height: 1100vh;
@@ -35,15 +36,18 @@ section.vid div.story {
 }
 section.vid div.story div {
     height: 100vh;
+    /* width:600px; */
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center; */
+    /* text-align:left; */
+    /* justify-content: center; */
+    /* margin-left: 20em; */
 }
 
 /* Glass Effect */
 .glass{
-    background: transparent;
+    background: linear-gradient(135deg, #cbe4d9, #abd4c9);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 20px;

@@ -1,0 +1,1 @@
+const imageUrl = 'Images/Image.jpg';
