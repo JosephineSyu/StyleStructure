@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Structure & Style</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: monospace;
+            white-space: pre;
+            background-color: #f0f0f0;
+            color: #000; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            overflow: hidden;
+        }
+        #imageCanvas {
+            display: none;  
+        }
+        #textOutput {
+            font-size: 8.75px;
+            line-height: 8.75px;
+        }
+
+        /* Color Overlay
+        .overlay {
+            position: absolute; 
+            top: 0;
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            mix-blend-mode: soft-light;
+        }
+        .shadows {
+            background: rgba(92,64,44);
+        }
+        .midtones {
+            background: rgba(115,153,157);
+        }
+        .highlights {
+            background: rgba(171,173,137);
+        } */
+    </style>
+</head>
+<body>
+   <!-- <h1>Text-Based Image from Eternal Sunshine of the Spotless Mind</h1> -->
+    <pre id="textOutput"></pre>
+    <canvas id="imageCanvas"></canvas>
+    <script src="script(Scene-01*).js"></script>
+</body>
+</html>
