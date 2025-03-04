@@ -110,7 +110,7 @@ const transcript = [
     "Say good-bye.",
     "She nods."
 ];
-
+const secretChar ='JOEL';
 const colors = ['#c26e61', '#237b8e', '#d7ae93'];
 
 const img = new Image();
@@ -174,6 +174,7 @@ img.onload = function () {
         asciiImage += '<br>';
     }
     // document.getElementById('textOutput').textContent = asciiImage;
+    asciiImage = asciiImage.replace(/\JOEL/g, `<a href="index(Scene-01).html" style="color: #inherit; text-decoration: none;">${secretChar}</a>`);
     const textOutput = document.getElementById('textOutput');
     textOutput.innerHTML = `<pre>${asciiImage}</pre>`;
 };

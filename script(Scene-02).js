@@ -2,6 +2,7 @@ window.onload = function () {
 const imageUrl = 'Images/Scene02.jpg';
 const characters = ['@', '#', 'S', '%', '?', '*', '+', ';', ':', ',', '.'];
 const colors = ['#c26e61', '#237b8e', '#d7ae93'];
+const secretChar = '?';
 
 const img = new Image();
 img.src = imageUrl; 
@@ -41,6 +42,7 @@ img.onload = function () {
         }
         asciiImage += '<br>';
     }
+    asciiImage = asciiImage.replace(/\*/g, `<a href="index(Scene-02*).html" style="color: #ff0000; text-decoration: none;">${secretChar}</a>`);
     // document.getElementById('textOutput').textContent = asciiImage;
     document.getElementById('textOutput').innerHTML = asciiImage;
 };

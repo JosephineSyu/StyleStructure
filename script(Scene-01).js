@@ -2,7 +2,8 @@ window.onload = function () {
     const imageUrl = 'Images/Image.jpg';
     const characters = ['@', '#', 'S', '%', '?', '*', '+', ';', ':', ',', '.'];
     const colors = ['#7b3f00', '#52796f', '#a39e66'];
-    
+    const secretChar = '?';
+
     const img = new Image();
     img.src = imageUrl; 
     img.crossOrigin = "Anonymous";
@@ -36,11 +37,13 @@ window.onload = function () {
                 if (brightness < 85) color = colors[0];
                 else if (brightness < 170) color = colors[1];
                 else color = colors[2];
-    
+                
                 asciiImage += `<span style ="color: ${color}">${characters[charIndex]}</span>`
             }
             asciiImage += '<br>';
         }
+        asciiImage = asciiImage.replace(/\?/g, `<a href="index(Scene-01*).html" style="color: inhereit; text-decoration: none;">${secretChar}</a>`);
+        
         // document.getElementById('textOutput').textContent = asciiImage;
         document.getElementById('textOutput').innerHTML = asciiImage;
     };

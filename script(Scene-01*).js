@@ -23,6 +23,7 @@ const transcript = [
     "Joel, you're a liar.",
     "The scene is faded completely now and Joel just lies there for a moment, registering Clementine's statement.",
 ];
+const secretChar = 'CLEMENTINE';
 const colors = ['#7b3f00', '#52796f', '#a39e66'];
 
 const img = new Image();
@@ -71,7 +72,7 @@ img.onload = function () {
                 const textSnippet = words[transcriptIndex % words.length];
 
                 // const delay = Math.random() * 2;
-                const fadedText = `<span class="shimmer" style="color: ${color}; opacity:${opacity};filter: saturate (1.5)">${textSnippet}</span>`;
+                const fadedText = `<span class="shimmer" style="color: ${color}; opacity:${opacity}; filter: saturate(1.5)">${textSnippet}</span>`;
                 asciiImage += fadedText + " ";
                 transcriptIndex++;
                 
@@ -79,6 +80,7 @@ img.onload = function () {
         asciiImage += '<br>';
     }
     // document.getElementById('textOutput').textContent = asciiImage;
+    asciiImage = asciiImage.replace(/\CLEMENTINE/g, `<a href="index(Scene-02).html" style="color: inherit; text-decoration: none;">${secretChar}</a>`);
     const textOutput = document.getElementById('textOutput');
     textOutput.innerHTML = `<pre>${asciiImage}</pre>`;
 };
