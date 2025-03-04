@@ -17,27 +17,6 @@ h3 {
     position: relative;
     z-index: 1; 
 }
-
-/* Shimmer! */
-/* @keyframes shimmer {
-    0%, 100% { filter: brightness(100%); }
-    50% { filter: brightness(140%); }
-}
-span {
-    animation: shimmer 2s infinite alternate;
-} */
-    @keyframes shimmer {
-        0%, 100% { opacity: 0.8; }
-        50% { opacity: 1; }
-    }
-span {
-    animation: shimmer 3s infinite alternate ease-in-out;
-    will-change: opacity; 
-}
-.shimmer {
-    display: inline-block; 
-    animation: shimmer 3s infinite alternate ease-in-out;
-}
 a:hover {
     filter: brightness(150%);
     cursor: pointer;

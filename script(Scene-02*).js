@@ -166,7 +166,7 @@ img.onload = function () {
                 const textSnippet = words[transcriptIndex % words.length];
 
                 const delay = Math.random() * 2;
-                const fadedText = `<span class="shimmer" style="color: ${color}; opacity:${opacity};">${textSnippet}</span>`;
+                const fadedText = `<span style="color: ${color}; opacity:${opacity};">${textSnippet}</span>`;
                 asciiImage += fadedText + " ";
                 transcriptIndex++;
                 

@@ -42,7 +42,7 @@ img.onload = function () {
         }
         asciiImage += '<br>';
     }
-    asciiImage = asciiImage.replace(/\*/g, `<a href="index(Scene-02*).html" style="color: #ff0000; text-decoration: none;">${secretChar}</a>`);
+    asciiImage = asciiImage.replace(/\*/g, `<a href="index(Scene-02*).html" style="color: inherit; text-decoration: none;">${secretChar}</a>`);
     // document.getElementById('textOutput').textContent = asciiImage;
     document.getElementById('textOutput').innerHTML = asciiImage;
 };
